@@ -48,13 +48,13 @@ services:
 
   # Alternative Kafka backend (profile; use with: `docker compose --profile kafka up -d`)
   zookeeper:
-    image: bitnami/zookeeper:latest
+    image: soldevelo/zookeeper:latest
     profiles: ["kafka"]
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
 
   kafka:
-    image: bitnami/kafka:latest
+    image: soldevelo/kafka:latest
     profiles: ["kafka"]
     ports:
       - "9092:9092"
